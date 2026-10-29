@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xleguisamoS2.Views.vTarea"
+             Title="Calificaciones">
+    <ScrollView>
+        <VerticalStackLayout 
+            Padding="25"
+            Spacing="25">
+
+            <Label Text="Sistema de Calificaciones UISRAEL"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#003366" />
+
+            <!-- Seleccionar Estudiante -->
+            <Label Text="Selecciona Estudiante:" FontAttributes="Bold" />
+            <Border Stroke="Gray" StrokeShape="RoundRectangle 5" Padding="5">
+                <Picker x:Name="pkEstudiante" Title="Seleccione un estudiante">
+                    <Picker.Items>
+                        <x:String>Carlos Mendoza</x:String>
+                        <x:String>Ana Belén Torres</x:String>
+                        <x:String>Luis Fernando Salazar</x:String>
+                        <x:String>María José Villacís</x:String>
+                        <x:String>David Alexander Ramos</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Border>
+
+            <!-- Fecha -->
+            <Label Text="Fecha de Registro:" FontAttributes="Bold" Margin="0,5,0,0" />
+            <DatePicker x:Name="dpFecha" Format="dd/MM/yyyy" />
+
+            <!-- PARCIAL 1 -->
+            <Label Text="--- PARCIAL 1 ---" FontAttributes="Bold" TextColor="#003366" Margin="0,10,0,0" />
+
+            <Label Text="Nota Seguimiento 1 (Sobre 10 * 0.3):" />
+            <Entry x:Name="txtSeguimiento1" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label Text="Examen 1 (Sobre 10 * 0.2):" />
+            <Entry x:Name="txtExamen1" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label Text="Nota Parcial 1 (Suma):" FontAttributes="Bold" />
+            <Entry x:Name="txtParcial1" 
+                   Text="0.00" 
+                   IsEnabled="False" 
+                   BackgroundColor="#F0F0F0" 
+                   TextColor="Black" />
+
+            <!-- PARCIAL 2 -->
+            <Label Text="--- PARCIAL 2 ---" FontAttributes="Bold" TextColor="#003366" Margin="0,10,0,0" />
+
+            <Label Text="Nota Seguimiento 2 (Sobre 10 * 0.3):" />
+            <Entry x:Name="txtSeguimiento2" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label Text="Examen 2 (Sobre 10 * 0.2):" />
+            <Entry x:Name="txtExamen2" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label Text="Nota Parcial 2 (Suma):" FontAttributes="Bold" />
+            <Entry x:Name="txtParcial2" 
+                   Text="0.00" 
+                   IsEnabled="False" 
+                   BackgroundColor="#F0F0F0" 
+                   TextColor="Black" />
+
+            <!-- NOTA FINAL -->
+            <Label Text="NOTA FINAL (Parcial 1 + Parcial 2):" FontAttributes="Bold" Margin="0,10,0,0" />
+            <Entry x:Name="txtNotaFinal" 
+                   Text="0.00" 
+                   IsEnabled="False" 
+                   BackgroundColor="#E2F0D9" 
+                   FontAttributes="Bold" 
+                   TextColor="Black" />
+
+            <!-- BOTÓN CALCULAR -->
+            <Button x:Name="btnCalcular"
+                    Text="Calcular"
+                    Margin="0,15,0,0"
+                    BackgroundColor="#003366"
+                    TextColor="White"
+                    Clicked="btnCalcular_Clicked" />
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

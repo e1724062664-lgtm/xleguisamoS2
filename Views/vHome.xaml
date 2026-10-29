@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xleguisamoS2.Views.vHome"
+             Title="vHome">
+    <VerticalStackLayout
+        Padding="25"
+        Spacing="25">
+
+
+        <Label Text="Semana 2: Elementos MAUI"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="TxtDato"
+               Placeholder="Ingresa el Dato" />
+
+        <!-- Picker envuelto en un Border visible -->
+        <Border Stroke="Gray" StrokeShape="RoundRectangle 5" Padding="5">
+            <Picker x:Name="pkPaises" Title="Lista de países">
+                <Picker.Items>
+                    <x:String>Ecuador</x:String>
+                    <x:String>Perú</x:String>
+                    <x:String>Colombia</x:String>
+                </Picker.Items>
+            </Picker>
+        </Border>
+
+        <!-- Corregido el formato de Date a YYYY-MM-DD -->
+        <DatePicker x:Name="DpFecha"
+                    Date="2026-12-12"
+                    Format="MM-dd-yyyy" />
+
+        <Button x:Name="btnMostrar"
+                Text="Mostrar"
+                Clicked="btnMostrar_Clicked" />
+
+        <Button x:Name="btnAbrir"
+                Text="Abrir tarea"
+                Clicked="btnAbrir_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
